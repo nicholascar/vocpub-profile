@@ -25,7 +25,7 @@
         skos:prefLabel "Validator in SHACL"@en ;
         dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
         dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/validation.ttl> ;
+        prof:hasArtifact <https://w3id.org/profile/vocpub/validator.shacl.ttl> ;
         prof:hasRole role:validation
     ] ,
     [
@@ -36,16 +36,16 @@
     ] ,
     [
         skos:prefLabel "Example of an invalid vocabulary"@en ;
-        dcterms:description "This example vocabulary does not satisfy the Specification's Requirement 2.1.5"@en ;
+        dcterms:description "This example vocabulary does not satisfy the Specification's Requirement 2.1.5 (the ConceptScheme is missing a dcterms:created date)"@en ;
         dcterms:format "text/turtle" ;
         prof:hasArtifact <https://w3id.org/profile/vocpub/examples/invalid.ttl> ;
         prof:hasRole role:example
     ] ,
     [
         skos:prefLabel "Example of a second invalid vocabulary"@en ;
-        dcterms:description "This example vocabulary does not satisfy the Specification's Requirements 2.3.1 & 2.3.2"@en ;
+        dcterms:description "This example vocabulary does not satisfy the Specification's Requirements 2.3.1 & 2.3.2 (one Concept has two titles, another is missing rdfs:isDefinedBy)"@en ;
         dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/examples/valid.2.ttl> ;
+        prof:hasArtifact <https://w3id.org/profile/vocpub/examples/invalid-2.ttl> ;
         prof:hasRole role:example
     ] ,
     [
