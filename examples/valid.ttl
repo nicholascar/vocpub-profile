@@ -17,9 +17,7 @@
     dcterms:created "2019-04-03"^^xsd:date ;
     dcterms:modified "2019-09-10"^^xsd:date ;
     dcterms:publisher <http://linked.data.gov.au/org/gsq> ;
-    skos:hasTopConcept 
-        da:open ,
-        da:restricted ;
+    skos:hasTopConcept da:open , da:restricted ;
 .
 
 <http://linked.data.gov.au/org/gsq> a sdo:Organization ;
