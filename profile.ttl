@@ -18,7 +18,7 @@
         skos:prefLabel "Specification Document"@en ;
         dcterms:conformsTo <https://www.w3.org/TR/html52/> ;
         dcterms:format "text/html" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/specification.html> ;
+        prof:hasArtifact <https://w3id.org/profile/vocpub/spec> ;
         prof:hasRole role:specification
     ] ,
     [
