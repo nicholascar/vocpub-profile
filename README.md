@@ -10,6 +10,18 @@ This profile is hosted online in [Linked Data](https://www.w3.org/standards/sema
 * <https://w3id.org/profile/vocpub>
 
 
+## Profile Resources
+
+### Specification
+This profile's _specification_ - the resource that contains the normative rules - is within the file [specification.html](specification.html) and it is able to be viewed online at:
+
+* <https://raw.githack.com/surroundaustralia/vocpub-profile/master/specification.html>
+
+### Validator
+This profile's rules, as defined in the _specification_ are presented for machine validation of RDF vocabularies in the file [validator.shacl.ttl](validator.shacl.ttl) which conforms to the [SHACL](https://www.w3.org/TR/shacl/) standard.
+
+Sools such as [pySHACL](https://github.com/RDFLib/pySHACL) and the online [SHACL Playground](https://shacl.org/playground/) can be used with this Validator to validate vocabulary files.
+
 ## License  
 This code is licensed using the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence. See the [LICENSE file](LICENSE) for the deed. 
 
@@ -24,7 +36,7 @@ To cite this profile, please use the following (formulated in [BibTex](http://ww
   author = {{SURROUND Australia Pty Ltd}},
   title = {{Vocabulary Publication Profile}},
   version = {1.0},
-  date = {2020},
+  date = {2021},
   publisher = {{SURROUND Australia Pty Ltd}},
   url = {https://w3id.org/profile/vocpub}
 }
