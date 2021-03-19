@@ -38,7 +38,7 @@
         skos:prefLabel "Example of an invalid vocabulary"@en ;
         dcterms:description "This example vocabulary does not satisfy the Specification's Requirement 2.1.5 (the ConceptScheme is missing a dcterms:created date)"@en ;
         dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/examples/invalid-1> ;
+        prof:hasArtifact <https://w3id.org/profile/vocpub/examples/invalid> ;
         prof:hasRole role:example
     ] ,
     [
