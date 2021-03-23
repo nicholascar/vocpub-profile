@@ -323,7 +323,7 @@
     sh:property [
         sh:path sdo:url ;
         sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
+        sh:datatype xsd:anyURI ;
     ] ;
     sh:message "Requirement 2.4.3 Each agent MUST indicate either a sdo:url (for organizations) or a sdo:email (for people) property with a URL or email value"
 .
@@ -334,7 +334,7 @@
     sh:property [
         sh:path sdo:email ;
         sh:minCount 1 ;
-        sh:nodeKind sh:IRI ;
+        sh:datatype xsd:anyURI ;
     ] ;
     sh:message "Requirement 2.4.3 Each agent MUST indicate either a sdo:url (for organizations) or a sdo:email (for people) property with a URL or email value"
 .
