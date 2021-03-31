@@ -36,7 +36,7 @@
         sh:path skos:prefLabel ;
         sh:minCount 1 ;
         sh:uniqueLang true ;
-        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
     ]
 .
 
@@ -48,7 +48,7 @@
         sh:path skos:definition ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
     ]
 .
 
@@ -139,7 +139,7 @@
             sh:path dcterms:provenance ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
         ]
     ) ;
     sh:message "2.1.7 Each vocabulary MUST indicate its source, or that it has no source, by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties" ;
@@ -169,7 +169,7 @@
         sh:path skos:prefLabel ;
         sh:minCount 1 ;
         sh:uniqueLang true ;
-        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
     ]
 .
 
@@ -181,7 +181,7 @@
         sh:path skos:definition ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
     ]
 .
 
@@ -205,7 +205,7 @@
             sh:path dcterms:provenance ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
         ]
     ) ;
     sh:message "2.2.2 Each skos:Collection in a vocabulary SHOULD indicate its source by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties if the collection is derived from a source" ;
@@ -223,7 +223,7 @@
         sh:path skos:prefLabel ;
         sh:minCount 1 ;
         sh:uniqueLang true ;
-        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
     ]
 .
 
@@ -235,7 +235,7 @@
         sh:path skos:definition ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
+        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
     ]
 .
 
@@ -293,7 +293,7 @@
             sh:path dcterms:provenance ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
         ]
     ) ;
     sh:message "2.3.4 Each skos:Concept in a vocabulary MAY indicate its source, if different or more finely specified than its vocabularies source, by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties" ;
