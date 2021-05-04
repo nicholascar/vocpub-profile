@@ -242,10 +242,10 @@
 <Requirement-2.3.2>
 	a sh:NodeShape ;
 	sh:targetClass skos:Concept ;
-    sh:message "Requirement 2.3.2 Each skos:Concept in a vocabulary MUST indicate the vocabulary that defines it by use of the rdfs:isDefinedBy property indicating a skos:ConceptScheme instance" ;
+    sh:message "Requirement 2.3.2 Each skos:Concept in a vocabulary MAY indicate the vocabulary that defines it by use of the rdfs:isDefinedBy property indicating a skos:ConceptScheme instance" ;
     sh:property [
         sh:path rdfs:isDefinedBy ;
-        sh:minCount 1 ;
+        sh:minCount 0 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
     ]
@@ -297,6 +297,19 @@
         ]
     ) ;
     sh:message "2.3.4 Each skos:Concept in a vocabulary MAY indicate its source, if different or more finely specified than its vocabularies source, by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties" ;
+    sh:severity sh:Info ;
+.
+
+<Requirement-2.3.5>
+	a sh:NodeShape ;
+	sh:targetClass skos:Concept ;
+    sh:message "2.3.5 Each skos:Concept in a vocabulary SHOULD indicate its permanent identifier as the value of a dcterms:identifier property. If the permanent identifier is a URI, the value may have the datatype xsd:anyURI" ;
+    sh:property [
+        sh:path dcterms:identifier ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+    ]
     sh:severity sh:Info ;
 .
 

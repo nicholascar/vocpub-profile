@@ -127,6 +127,8 @@
         <dd>This specification is part of the <em>VocPub Profile</em>. See that profile's main document for License &amp; Rights information and other metadata not given here.</dd>
         <dt>Profile URI</dt>
         <dd><code><a href="https://w3id.org/profile/vocpub">https://w3id.org/profile/vocpub</a></code></dd>
+        <dt>License</dt>
+        <dd><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></dd>
       </dl>
     </section>
     <section id="abstract">
@@ -293,7 +295,7 @@
           To ensure that every <code>skos:Concept</code> is linked to the vocabulary that defines it:
         </p>
         <p class="req">
-          2.3.2 Each <code>skos:Concept</code> in a vocabulary <em>MUST</em> indicate the vocabulary that defines it by use of the <code>rdfs:isDefinedBy</code> property indicating a <code>skos:ConceptScheme</code> instance
+          2.3.2 Each <code>skos:Concept</code> in a vocabulary <em>MAY</em> indicate the vocabulary that defines it by use of the <code>rdfs:isDefinedBy</code> property indicating a <code>skos:ConceptScheme</code> instance
         </p>
         <p>Note that the vocabulary that defines a <code>skos:Concept</code> does not have to be the vocabulary in the file being validated. This is to allow for <code>skos:Concept</code> instance reuse across multiple vocabularies.</p>
         <p>
@@ -307,6 +309,9 @@
         </p>
         <p class="req">
           2.3.4 Each <code>skos:Concept</code> in a vocabulary <em>MAY</em> indicate its source, if different or more finely specified than its vocabularies source, by use of either the <code>prov:wasDerivedFrom</code>, <code>dcterms:source</code>, <code>dcterms:provenance</code> properties
+        </p>
+        <p class="req">
+          2.3.5 Each <code>skos:Concept</code> in a vocabulary <em>SHOULD</em> indicate its permanent identifier as the value of a <code>dcterms:identifier</code> property. If the permanent identifier is a URI, the value may have the datatype <code>^^xsd:anyURI</code>
         </p>
       </section>
     </section>
