@@ -155,13 +155,13 @@
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
     ] ;
-    sh:message "2.1.10 Each vocabulary's skos:ConceptScheme MUST link to at least one skos:Concept within the vocabulary as with the property skos:hasTopConcept" ;
+    sh:message "2.1.9 Each vocabulary's skos:ConceptScheme MUST link to at least one skos:Concept within the vocabulary as with the property skos:hasTopConcept" ;
 .
 
 #
 #   Collections
 #
-<Requirement-2.2.4a>
+<Requirement-2.2.1a>
 	a sh:NodeShape ;
 	sh:targetClass skos:Collection ;
     sh:message "Requirement 2.2.1 Each skos:Collection instance MUST have one and only one title indicated using the skos:prefLabel property that must be a text literal value" ;
@@ -173,7 +173,7 @@
     ]
 .
 
-<Requirement-2.2.4b>
+<Requirement-2.2.1b>
 	a sh:NodeShape ;
 	sh:targetClass skos:Collection ;
     sh:message "Requirement 2.2.1 Each skos:Collection instance MUST have one and only one definition indicated using the skos:definition property that must be a text literal value" ;
@@ -218,7 +218,7 @@
 <Requirement-2.3.1a>
 	a sh:NodeShape ;
 	sh:targetClass skos:Concept ;
-    sh:message "Requirement 2.2.1 Each skos:Concept instance MUST have one and only one title indicated using the skos:prefLabel property that must be a text literal value" ;
+    sh:message "Requirement 2.3.1 Each skos:Concept instance MUST have one and only one title indicated using the skos:prefLabel property that must be a text literal value" ;
     sh:property [
         sh:path skos:prefLabel ;
         sh:minCount 1 ;
@@ -230,7 +230,7 @@
 <Requirement-2.3.1b>
 	a sh:NodeShape ;
 	sh:targetClass skos:Concept ;
-    sh:message "Requirement 2.2.1 Each skos:Concept instance MUST have one and only one definition indicated using the skos:definition property that must be a text literal value" ;
+    sh:message "Requirement 2.3.1 Each skos:Concept instance MUST have one and only one definition indicated using the skos:definition property that must be a text literal value" ;
     sh:property [
         sh:path skos:definition ;
         sh:minCount 1 ;

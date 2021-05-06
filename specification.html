@@ -118,9 +118,11 @@
         <dt>Created</dt>
         <dd>2020-06-14</dd>
         <dt>Modified</dt>
-        <dd>2021-01-07</dd>
+        <dd>2021-05-04</dd>
         <dt>Creator</dt>
         <dd><a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a></dd>
+        <dt>Contributor</dt>
+        <dd><a href="https://orcid.org/0000-0002-3884-3420">Simon J D Cox</a></dd>
         <dt>Publisher</dt>
         <dd><a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a></dd>
         <dt>Further metadata</dt>
@@ -223,13 +225,19 @@
           To ensure vocabularies can be catalogued effectively and governed:
         </p>
         <p class="req">
-          2.1.4 Each vocabulary <em>MUST</em> have one and only one title and one and only one definition values indicated using the <code>skos:prefLabel</code> and <code>skos:definition</code> properties respectively that must be text literal values
+          2.1.4a Each vocabulary <em>MUST</em> have one and only one title indicated using the <code>skos:prefLabel</code> property that must be a text literal value
+        </p>
+        <p class="req">
+          2.1.4b Each vocabulary <em>MUST</em> have one and only one definition value indicated using the <code>skos:definition</code> property that must be a text literal values
         </p>
         <p class="req">
           2.1.5 Each vocabulary <em>MUST</em> have one and only one created date and one and only one modified date indicated using the <code>dcterms:created</code> and <code>dcterms:modified</code> properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal value
         </p>
         <p class="req">
-          2.1.6 Each vocabulary <em>MUST</em> have at least one creator and at least one publisher, indicated using <code>dcterms:creator</code> and <code>dcterms:publisher</code> properties respectively that must be URI values indicating instances of <code>sdo:Person</code>, <code>sdo:Organization</code> or <code>sdo:GovernmentOrganization</code>
+          2.1.6a Each vocabulary <em>MUST</em> have at least one creator, indicated using <code>dcterms:creator</code> property that must be a URI value indicating an instances of <code>sdo:Person</code>, <code>sdo:Organization</code> or <code>sdo:GovernmentOrganization</code>
+        </p>
+        <p class="req">
+          2.1.6b Each vocabulary <em>MUST</em> have at least one publisher, indicated using <code>dcterms:publisher</code> property that must be a URI value indicating an instance of <code>sdo:Person</code>, <code>sdo:Organization</code> or <code>sdo:GovernmentOrganization</code>
         </p>
         <p>
           To be able to link SKOS vocabularies to their non-vocabulary source information:
@@ -265,7 +273,10 @@
           To ensure that <code>skos:Collection</code> instances are identifiable and their meaning isn't obscure or lost:
         </p>
         <p class="req">
-          2.2.1 Each <code>skos:Collection</code> instance <em>MUST</em> have one and only one title and one and only one definition values indicated using the <code>skos:prefLabel</code> and <code>skos:definition</code> properties respectively that must be text literal values
+          2.2.1a Each <code>skos:Collection</code> instance <em>MUST</em> have one and only one title indicated using the <code>skos:prefLabel</code> property that must be a text literal value
+        </p>
+        <p class="req">
+          2.2.1b Each <code>skos:Collection</code> instance <em>MUST</em> have one and only one definition indicated using the <code>skos:definition</code> property that must be a text literal value
         </p>
         <p>
           If a <code>skos:Collection</code> is derived from an existing resource:
@@ -289,7 +300,10 @@
           To ensure that <code>skos:Concept</code> instances are identifiable and their meaning isn't obscure or lost:
         </p>
         <p class="req">
-          2.3.1 Each <code>skos:Concept</code> instance <em>MUST</em> have one and only one title and one and only one definition values indicated using the <code>skos:prefLabel</code> and <code>skos:definition</code> properties respectively that must be text literal values
+          2.3.1a Each <code>skos:Concept</code> instance <em>MUST</em> have one and only one title indicated using the <code>skos:prefLabel</code> property that must be a text literal value
+        </p>
+        <p class="req">
+          2.3.1b Each <code>skos:Concept</code> instance <em>MUST</em> have one and only one definition indicated using the <code>skos:definition</code> property that must be a text literal value
         </p>
         <p>
           To ensure that every <code>skos:Concept</code> is linked to the vocabulary that defines it:
@@ -333,7 +347,10 @@
         To ensure that agents are linked to non-Semantic Web forms of identification:
       </p>
       <p class="req">
-        2.4.3 Each agent <em>MUST</em> indicate either a <code>sdo:url</code> (for organizations) or a <code>sdo:email</code> (for people) property with a URL or email value
+        2.4.3a Each agent <em>MUST</em> indicate either a <code>sdo:url</code> (for organizations) or a <code>sdo:email</code> (for people) property with a URL or email value
+      </p>
+      <p class="req">
+        2.4.3b Each agent <em>MUST</em> indicate either a <code>sdo:url</code> (for organizations) or a <code>sdo:email</code> (for people) property with a URL or email value
       </p>
     </section>
     <section id="references">
