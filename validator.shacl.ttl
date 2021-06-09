@@ -309,7 +309,7 @@
         sh:minCount 0 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:Literal ;
-    ]
+    ] ;
     sh:severity sh:Info ;
 .
 
