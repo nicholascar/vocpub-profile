@@ -138,8 +138,7 @@
             [
                 sh:path dcterms:provenance ;
                 sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:datatype xsd:string ;
+                sh:maxCount 1 ; 
             ]
         ) ;
         sh:message "2.1.7 Each vocabulary _MUST_ indicate its source, or that it has no source, by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties" ;
@@ -205,7 +204,6 @@
             sh:path dcterms:provenance ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:datatype xsd:string ;
         ]
     ) ;
     sh:message "2.2.2 Each skos:Collection in a vocabulary _SHOULD_ indicate its source by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties if the collection is derived from a source" ;
@@ -293,7 +291,6 @@
                 sh:path dcterms:provenance ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:datatype xsd:string ;
             ]
         ) ;
         sh:message "2.3.4 Each skos:Concept in a vocabulary _MAY_ indicate its source, if different or more finely specified than its vocabularies source, by use of either the `prov:wasDerivedFrom`, `dcterms:source`, `dcterms:provenance` properties" ;
