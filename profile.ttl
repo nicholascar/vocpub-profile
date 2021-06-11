@@ -51,7 +51,7 @@
     [
         skos:prefLabel "Profile code repository"@en ;
         dcterms:description "Code repository storing all Profile artifacts"@en ;
-        prof:hasArtifact <https://github.com/surroundaustralia/vocpub-profile> ;
+        prof:hasArtifact "https://github.com/surroundaustralia/vocpub-profile"^^xsd:anyURI ;
         prof:hasRole role:repository
     ] ;
     prof:isProfileOf <https://www.w3.org/TR/skos-reference/> ;
