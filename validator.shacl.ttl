@@ -70,7 +70,7 @@
                 sh:datatype xsd:dateTimeStamp ;
             ]
         ) ;
-        sh:message "2.1.5 Each vocabulary _MUST_ have one and only one created date indicated using the dcterms:created property that must be either an `xsd:date`, `xsd:dateTime` or `xsd:dateTimeStamp` literal value" ;
+        sh:message "Requirement 2.1.5 Each vocabulary _MUST_ have one and only one created date indicated using the dcterms:created property that must be either an `xsd:date`, `xsd:dateTime` or `xsd:dateTimeStamp` literal value" ;
     ] ;
     sh:property [
         sh:path dcterms:modified ;
@@ -87,7 +87,7 @@
                 sh:datatype xsd:dateTimeStamp ;
             ]
         ) ;
-        sh:message "2.1.5 Each vocabulary _MUST_ have one and only one modified date indicated using the dcterms:modified property that must be either an `xsd:date`, `xsd:dateTime or `xsd:dateTimeStamp` literal value" ;
+        sh:message "Requirement 2.1.5 Each vocabulary _MUST_ have one and only one modified date indicated using the dcterms:modified property that must be either an `xsd:date`, `xsd:dateTime or `xsd:dateTimeStamp` literal value" ;
     ] ;
 .
 
@@ -141,7 +141,7 @@
                 sh:maxCount 1 ; 
             ]
         ) ;
-        sh:message "2.1.7 Each vocabulary _MUST_ indicate its source, or that it has no source, by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties" ;
+        sh:message "Requirement 2.1.7 Each vocabulary _MUST_ indicate its source, or that it has no source, by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties" ;
 .
 
 # Requirement-2.1.8 so far un-implemented in SHACL
@@ -154,7 +154,7 @@
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
     ] ;
-    sh:message "2.1.9 Each vocabulary's skos:ConceptScheme _MUST_ link to at least one skos:Concept within the vocabulary as with the property skos:hasTopConcept" ;
+    sh:message "Requirement 2.1.9 Each vocabulary's skos:ConceptScheme _MUST_ link to at least one skos:Concept within the vocabulary as with the property skos:hasTopConcept" ;
 .
 
 #
@@ -206,7 +206,7 @@
             sh:maxCount 1 ;
         ]
     ) ;
-    sh:message "2.2.2 Each skos:Collection in a vocabulary _SHOULD_ indicate its source by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties if the collection is derived from a source" ;
+    sh:message "Requirement 2.2.2 Each skos:Collection in a vocabulary _SHOULD_ indicate its source by use of either the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties if the collection is derived from a source" ;
     sh:severity sh:Warning ;
 .
 
@@ -293,14 +293,14 @@
                 sh:maxCount 1 ;
             ]
         ) ;
-        sh:message "2.3.4 Each skos:Concept in a vocabulary _MAY_ indicate its source, if different or more finely specified than its vocabularies source, by use of either the `prov:wasDerivedFrom`, `dcterms:source`, `dcterms:provenance` properties" ;
+        sh:message "Requirement 2.3.4 Each skos:Concept in a vocabulary _MAY_ indicate its source, if different or more finely specified than its vocabularies source, by use of either the `prov:wasDerivedFrom`, `dcterms:source`, `dcterms:provenance` properties" ;
         sh:severity sh:Info ;
 .
 
 <Requirement-2.3.5>
 	a sh:NodeShape ;
 	sh:targetClass skos:Concept ;
-        sh:message "2.3.5 Each skos:Concept in a vocabulary _SHOULD_ indicate its permanent identifier as the value of a `dcterms:identifier` property. If the permanent identifier is a URI, the value may have the datatype `xsd:anyURI`" ;
+        sh:message "Requirement 2.3.5 Each skos:Concept in a vocabulary _SHOULD_ indicate its permanent identifier as the value of a `dcterms:identifier` property. If the permanent identifier is a URI, the value may have the datatype `xsd:anyURI`" ;
         sh:property [
             sh:path dcterms:identifier ;
             sh:minCount 0 ;
