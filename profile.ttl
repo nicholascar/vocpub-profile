@@ -10,9 +10,9 @@
     a prof:Profile ;
     dcterms:created "2020-06-13"^^xsd:date ;
     dcterms:creator <https://linked.data.gov.au/org/surround> ;
-    dcterms:modified "2020-06-15"^^xsd:date ;
+    dcterms:modified "2021-07-28"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/surround> ;
-    skos:definition """This is a profile of SKOS - i.e. SKOS with additional constraints. It defines some compulsory properties for SKOS's ConceptScheme, Concept and Collection classes and ensures that certain relationships between them are present, e.g. topCoceptOf/inScheme linking Concepts to Conceptschemes. It also requires goes a bit beyond 'pure' SKOS by ensuring that Concepts indicate the ConceptScheme they are defined in, which may be different to the ConceptScheme they re presented in. This allows VocPub-valid SKOS Concepts to be re-used in multiple of vocabularies efficiently.
+    skos:definition """This is a profile of taxonomy data model SKOS - i.e. SKOS with additional constraints. It defines some compulsory properties for SKOS's ConceptScheme, Concept and Collection classes and ensures that certain relationships between them are present, e.g. topConceptOf & inScheme linking Concepts to ConceptSchemes. It also requires goes a bit beyond 'pure' SKOS by ensuring that Concepts indicate the ConceptScheme they are defined in, which may be different to the ConceptScheme they re presented in. This allows VocPub-valid SKOS Concepts to be re-used in multiple of vocabularies efficiently.
     
 This profile is used for multile Australian government and international vocabularies and is entirely generic, i.e. the additional constraints are not Australian or government-specific but just ensure certain technical model capabilities in the data."""@en ;
     skos:prefLabel "VocPub profile of SKOS" ;
