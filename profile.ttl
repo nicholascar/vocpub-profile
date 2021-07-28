@@ -12,7 +12,9 @@
     dcterms:creator <https://linked.data.gov.au/org/surround> ;
     dcterms:modified "2020-06-15"^^xsd:date ;
     dcterms:publisher <https://linked.data.gov.au/org/surround> ;
-    skos:definition "This profile of SKOS defines what ConceptScheme, Concept and Collection properties and their relative arrangements Geoscience Australia requires of its vocabularies for its business purposes"@en ;
+    skos:definition """This is a profile of SKOS - i.e. SKOS with additional constraints. It defines some compulsory properties for SKOS's ConceptScheme, Concept and Collection classes and ensures that certain relationships between them are present, e.g. topCoceptOf/inScheme linking Concepts to Conceptschemes. It also requires goes a bit beyond 'pure' SKOS by ensuring that Concepts indicate the ConceptScheme they are defined in, which may be different to the ConceptScheme they re presented in. This allows VocPub-valid SKOS Concepts to be re-used in multiple of vocabularies efficiently.
+    
+This profile is used for multile Australian government and international vocabularies and is entirely generic, i.e. the additional constraints are not Australian or government-specific but just ensure certain technical model capabilities in the data."""@en ;
     skos:prefLabel "VocPub profile of SKOS" ;
     prof:hasResource [
         skos:prefLabel "Specification Document"@en ;
@@ -28,6 +30,13 @@
         prof:hasArtifact <https://w3id.org/profile/vocpub/validator> ;
         prof:hasRole role:validation
     ] ,
+    [
+        skos:prefLabel "How to Validate"@en ;
+        dcterms:description "Written instructions on how to use this profile's validator on data"@en ;
+        dcterms:format "text/html" ;
+        prof:hasArtifact <https://w3id.org/profile/vocpub/htv> ;
+        prof:hasRole role:guidance
+    ] ,    
     [
         skos:prefLabel "Example of a valid vocabulary"@en ;
         dcterms:format "text/turtle" ;
