@@ -119,30 +119,95 @@
 	] ;
 .
 
-<Requirement-2.1.7>
-	a sh:NodeShape ;
-	sh:targetClass skos:ConceptScheme ;
-        sh:or (
-            [
-                sh:path prov:wasDerivedFrom ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:nodeKind sh:IRI ;
-            ]
-            [
-                sh:path dcterms:source ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:nodeKind sh:IRI ;
-            ]
-            [
-                sh:path dcterms:provenance ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ; 
-            ]
-        ) ;
-        sh:message "Requirement 2.1.7 Each vocabulary _MUST_ indicate its source, or that it has no source, by use of at least one of the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties" ;
+<Requirement-2.1.7a>
+    a sh:NodeShape ;
+    sh:message "Requirement 2.1.7 Provenance for a ConceptScheme _MUST_ be indicated by at least one of the following properties: dcterms:provenance, dcterms:source or prov:wasDerivedFrom." ;
+    sh:or ( 
+        [ 
+            sh:minCount 1 ;
+            sh:path prov:wasDerivedFrom ;
+            sh:message "This is a message about prov:wasDerivedFrom" ;
+        ] 
+        [
+            sh:minCount 1 ;
+            sh:path dcterms:source ;
+            sh:message "This is a message about dcterms:source" ;
+        ]
+        [
+            sh:minCount 1 ;
+            sh:path dcterms:provenance ;
+            sh:message "This is a message about dcterms:provenance" ;
+        ] 
+    ) ;
+    sh:targetClass skos:ConceptScheme ;
 .
+
+<Requirement-2.1.7b>
+    a sh:NodeShape ;
+    sh:targetSubjectsOf dcterms:provenance ;    
+    sh:property [
+        a sh:PropertyShape ;
+        sh:maxCount 1 ;
+        sh:path dcterms:provenance ;
+        sh:message "You _MUST NOT_ use dcterms:provenance property more than once on any object." ;
+    ] ;
+.
+
+<Requirement-2.1.7c>
+    a sh:NodeShape ;
+    sh:targetSubjectsOf dcterms:source ;    
+    sh:property [
+        a sh:PropertyShape ;
+        sh:maxCount 1 ;
+        sh:path dcterms:source ;
+        sh:message "You _MUST NOT_ use dcterms:source property more than once on any object." ;
+    ] ;
+.
+
+<Requirement-2.1.7d>
+    a sh:NodeShape ;
+    sh:targetSubjectsOf prov:wasDerivedFrom ;    
+    sh:property [
+        a sh:PropertyShape ;
+        sh:maxCount 1 ;
+        sh:path prov:wasDerivedFrom ;
+        sh:message "You _MUST NOT_ use prov:wasDerivedFrom property more than once on any object." ;
+    ] ;
+.
+
+<Requirement-2.1.7e>
+    a sh:NodeShape ;
+    sh:targetSubjectsOf dcterms:source ;
+    sh:property [
+        a sh:PropertyShape ;
+        sh:path dcterms:source ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Whenever dcterms:source is used, it must be a datatype property indicating an object of type xsd:anyURI" ;
+    ] ;
+.
+
+<Requirement-2.1.7f>
+    a sh:NodeShape ;
+    sh:targetSubjectsOf dcterms:provenance ;
+    sh:property [
+        a sh:PropertyShape ;
+        sh:path dcterms:provenance ;
+        sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
+        sh:message "Whenever dcterms:provenance is used, it must be a datatype property indicating an object of type xsd:string or rdf:LangString" ;
+    ] ;
+.
+
+<Requirement-2.1.7g>
+    a sh:NodeShape ;
+    sh:targetSubjectsOf prov:wasDerivedFrom ;
+    sh:property [
+        a sh:PropertyShape ;
+        sh:path prov:wasDerivedFrom ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Whenever prov:wasDerivedFrom is used, it must be an object property indicating an IRI" ;
+    ] ;
+.
+
 
 # Requirement-2.1.8 so far un-implemented in SHACL
 
@@ -185,28 +250,26 @@
 .
 
 <Requirement-2.2.2>
-	a sh:NodeShape ;
-	sh:targetClass skos:Collection ;
-    sh:or (
-        [
+    a sh:NodeShape ;
+    sh:message "Requirement 2.1.7 Provenance for a Collection _SHOULD_ be indicated by at least one of the following properties: dcterms:provenance, dcterms:source or prov:wasDerivedFrom." ;
+    sh:or ( 
+        [ 
+            sh:minCount 1 ;
             sh:path prov:wasDerivedFrom ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
-        ]
+            sh:message "This is a message about prov:wasDerivedFrom" ;
+        ] 
         [
+            sh:minCount 1 ;
             sh:path dcterms:source ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:IRI ;
+            sh:message "This is a message about dcterms:source" ;
         ]
         [
-            sh:path dcterms:provenance ;
             sh:minCount 1 ;
-            sh:maxCount 1 ;
-        ]
+            sh:path dcterms:provenance ;
+            sh:message "This is a message about dcterms:provenance" ;
+        ] 
     ) ;
-    sh:message "Requirement 2.2.2 Each skos:Collection in a vocabulary _SHOULD_ indicate its source by use of at least one of the prov:wasDerivedFrom, dcterms:source, dcterms:provenance properties if the collection is derived from a source" ;
+    sh:targetClass skos:Collection ;
     sh:severity sh:Warning ;
 .
 
@@ -272,29 +335,27 @@
 .
 
 <Requirement-2.3.4>
-	a sh:NodeShape ;
-	sh:targetClass skos:Concept ;
-        sh:or (
-            [
-                sh:path prov:wasDerivedFrom ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:nodeKind sh:IRI ;
-            ]
-            [
-                sh:path dcterms:source ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:nodeKind sh:IRI ;
-            ]
-            [
-                sh:path dcterms:provenance ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-            ]
-        ) ;
-        sh:message "Requirement 2.3.4 Each skos:Concept in a vocabulary _MAY_ indicate its source, if different or more finely specified than its vocabularies source, by use of at least one of the `prov:wasDerivedFrom`, `dcterms:source`, `dcterms:provenance` properties" ;
-        sh:severity sh:Info ;
+    a sh:NodeShape ;
+    sh:message "Requirement 2.1.7 Provenance for a Concept _SHOULD_ be indicated by at least one of the following properties: dcterms:provenance, dcterms:source or prov:wasDerivedFrom." ;
+    sh:or ( 
+        [ 
+            sh:minCount 1 ;
+            sh:path prov:wasDerivedFrom ;
+            sh:message "This is a message about prov:wasDerivedFrom" ;
+        ] 
+        [
+            sh:minCount 1 ;
+            sh:path dcterms:source ;
+            sh:message "This is a message about dcterms:source" ;
+        ]
+        [
+            sh:minCount 1 ;
+            sh:path dcterms:provenance ;
+            sh:message "This is a message about dcterms:provenance" ;
+        ] 
+    ) ;
+    sh:targetClass skos:Concept ;
+    sh:severity sh:Warning ;
 .
 
 <Requirement-2.3.5>

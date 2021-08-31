@@ -12,7 +12,7 @@
     skos:prefLabel "Data Access Rights"@en ;
     skos:definition "Data access rights control how users and systems access a data resource."@en ;
     skos:historyNote "This vocabulary is taken from the COAR Controlled Vocabularies Interest Group (http://vocabularies.coar-repositories.org/documentation/access_rights/) but is redelivered as that vocabulary isn't well presented online."@en ;
-    dcterms:source <http://vocabularies.coar-repositories.org/documentation/access_rights/> ;
+    dcterms:source "http://vocabularies.coar-repositories.org/documentation/access_rights/"^^xsd:anyURI ;
     dcterms:creator <http://linked.data.gov.au/org/gsq> ;
     dcterms:created "2019-04-03"^^xsd:date ;
     dcterms:modified "2019-09-10"^^xsd:date ;
