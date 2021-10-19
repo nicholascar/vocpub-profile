@@ -2,114 +2,21 @@
 <html lang="en">
 <head lang="en">
   <meta charset="UTF-8">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <link href='//fonts.googleapis.com/css?family=Spartan:300,400' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Bebas+Neue:300,400' rel='stylesheet' type='text/css'>  
+  <link href="style/surround.css" rel="stylesheet" type="text/css">
   <title>VocPub Profile</title>
-  <style type="text/css">
-    body, html {
-      margin:0;
-      padding:0;
-      width:100%;
-    }
-
-    body {
-      display:grid;
-      grid-template-columns: 1fr 3fr 1fr ;
-      grid-template-rows: 140px 10px auto 200px;
-
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height: 1.2em;
-    }
-
-    #header {
-      overflow: hidden;
-    }
-
-    #slogan {
-      font-size: 18px;
-      font-weight: 400;
-      color: #2f2f2f;
-
-      overflow: hidden;
-    }
-
-    #nav a {
-      color: #333;
-      text-decoration: none;
-      font-family: sans-serif;
-      margin: 0 10px 0 10px;
-    }
-
-    #strip {
-      width: 100%;
-      margin: 0;
-      position: relative;
-      display: block;
-      grid-column:1/4; 
-      background-color: rgb(182, 46, 51);
-    }
-
-    #content {
-      margin-top: 30px;
-    }
-
-    h1 {
-      padding: 0;
-      margin: 0 0 0.2em 0;
-      color: #2f2f2f;
-      font-family: sans-serif;
-      font-size: 3em;
-      font-weight: normal;
-      line-height: 1.1;
-    }
-
-    #footer {
-      background-color: rgb(238, 238, 238);
-      border-top: solid 1px rgb(38, 51, 122);
-      padding-top:30px;
-      text-align: center;
-      color: rgb(50, 50, 50);
-    }
-    #footer a {
-      color: rgb(161, 154, 154);
-      text-decoration: none;
-      margin: 0 10px 0 10px
-    }
-
-    section {
-      margin-top: 2em;
-    }
-    dt {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    dd {
-      margin-bottom: 1em;
-    }
-    p.quote {
-      margin: 20px;
-      font-style: italic;
-      width: 50%;
-    }
-    p.req {
-      color: darkred;
-    }
-    code {
-      font-size: 1.2em;
-    }
-
-    th {
-      vertical-align: top;
-      padding-right: 10px;
-    }
-  </style>
 </head>
 <body>
-  <div id="header" style="grid-column:2; display:grid; grid-template-columns:180px auto; grid-template-rows:50% 50%;">
+  <div class="header" style="grid-column:1;"></div>
+  <div id="header" class="header" style="grid-column:2; display:grid; grid-template-columns:180px auto; grid-template-rows:50% 50%;">
     <div id="logo" style="grid-column:1; grid-row:1/3">
       <a href="https://surroundaustralia.com">
-        <img alt="SURROUND Logo" style="width:100px; margin-top:10px" src="style/SURROUND-logo-100.png" /></a>
+        <img alt="SURROUND Logo" style="width:300px; margin-top:10px" src="style/logo-white.144b0ef3.svg" /></a>
     </div>
   </div><!-- #header -->
-  <div id="strip"></div>
+  <div class="header" style="grid-column:3;"></div>
   <div id="content" style="grid-column:2;">
     <h1>VocPub Profile</h1>
     <section id="metadata">
@@ -242,12 +149,29 @@
     </section>
     <p>&nbsp;</p>
   </div><!-- #content -->
-  <div id="footer" style="grid-column:1/4;">
-    <div id="footer-links">
-      &copy; SURROUND Australia Pty Ltd, 2021
-      <a href="https://surroundaustralia.com/about">About</a>
-      <a href="https://surroundaustralia.com/contact">Contact Us</a>
+  <div class="footer" style="grid-column:1;"></div>
+  <div class="footer" style="grid-column:2; display:grid; grid-column:70% 30%;">
+    <div style="grid-column:1;">
+      <img src="style/logo-dark.41edee3d.svg" alt="SURROUND white logo" />
+    </div>
+    <div style="grid-column:2;">
+      <div style="float:right;">
+        <h4>SURROUND Australia Pty Ltd</h4>
+        <p><a href="https://surroundaustralia.com">https://surroundaustralia.com</a></p>
+        <p style="font-style: italic;">
+          Level 9, Nishi Building<br />
+          2 Phillip Law Street, New Acton<br />
+          Canberra 2601<br />
+          Australia
+        </p>
+        <p><a href="info@surroundaustralia.com">info@surroundaustralia.com</a></p>
+        <p>
+          <a href="https://surroundaustralia.com/privacy-policy">Privacy Policy</a>
+        </p>
+        <p>&copy; SURROUND Australia Pty. Ltd. 2021</p>
       </div>
+    </div>
   </div><!-- #footer -->
+  <div class="footer" style="grid-column:3;"></div>
 </body>
 </html>
