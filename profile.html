@@ -42,43 +42,25 @@
         <dd><a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a></dd>
         <dt>Repository</dt>
         <dd><a href="https://github.com/surroundaustralia/vocpub-profile">https://github.com/surroundaustralia/vocpub-profile</a></dd>
+        <dt><a href="https://w3c.github.io/dx-prof/prof/#Property:hasResource">Profile Resources</a></dt>
+        <dd>
+          <ol>
+            <li><a href="#https://w3id.org/profile/vocpub/spec">Specification</a></li>
+            <li><a href="#https://w3id.org/profile/vocpub/validator">Validator</a></li>
+            <li><a href="#https://w3id.org/profile/vocpub/htv">How to validate instructions</a></li>
+            <li><a href="#https://w3id.org/profile/vocpub/example/valid">Valid example data</a></li>
+            <li><a href="#https://w3id.org/profile/vocpub/example/invalid">Invalid example data 1</a></li>
+            <li><a href="#https://w3id.org/profile/vocpub/example/invalid-2">Invalid example data 2</a></li>            
+          </ol>
+        </dd>
       </dl>
+    </section>
+    <section id="resources">
       <h2>Profile Resources</h2>
       <p>This profile contains the following <code>prof:Resource</code> instances:</p>
-      <table class="props">
+      <table class="props" id="https://w3id.org/profile/vocpub/spec">
         <tr>
-          <td colspan="2"><h3>1. Validator in SHACL</h3></td>
-        </tr>
-        <tr>
-          <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/validator">https://w3id.org/profile/vocpub/validator</a></td>
-        </tr>
-        <tr>
-          <th>Role</th><td><code><a href="http://www.w3.org/ns/dx/prof/role/validation">role:validation</a></code></td>
-        </tr>
-        <tr>
-          <th>Conforms</th><td><a href="https://www.w3.org/TR/shacl/">SHACL</a></td>
-        </tr>
-        <tr>
-          <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/turtle">text/turtle</a></code></td>
-        </tr>
-      </table>
-      <table class="props">
-        <tr>
-          <td colspan="2"><h3>2. How to Validate</h3></td>
-        </tr>
-        <tr>
-          <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/htv">https://w3id.org/profile/vocpub/htv</a></td>
-        </tr>
-        <tr>
-          <th>Role</th><td><code><a href="http://www.w3.org/ns/dx/prof/role/guidance">role:guidance</a></code></td>
-        </tr>
-        <tr>
-          <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/html">text/html</a></code></td>
-        </tr>
-      </table>      
-      <table class="props">
-        <tr>
-          <td colspan="2"><h3>3. Specification Document</h3></td>
+          <td colspan="2"><h3>1. Specification Document</h3></td>
         </tr>
         <tr>
           <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/spec">https://w3id.org/profile/vocpub/spec</a></td>
@@ -93,7 +75,38 @@
           <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/html">text/html</a></code></td>
         </tr>
       </table>
-      <table class="props">
+      <table class="props" id="https://w3id.org/profile/vocpub/validator">
+        <tr>
+          <td colspan="2"><h3>2. Validator in SHACL</h3></td>
+        </tr>
+        <tr>
+          <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/validator">https://w3id.org/profile/vocpub/validator</a></td>
+        </tr>
+        <tr>
+          <th>Role</th><td><code><a href="http://www.w3.org/ns/dx/prof/role/validation">role:validation</a></code></td>
+        </tr>
+        <tr>
+          <th>Conforms</th><td><a href="https://www.w3.org/TR/shacl/">SHACL</a></td>
+        </tr>
+        <tr>
+          <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/turtle">text/turtle</a></code></td>
+        </tr>
+      </table>       
+      <table class="props" id="https://w3id.org/profile/vocpub/htv">
+        <tr>
+          <td colspan="2"><h3>3. How to Validate instructions</h3></td>
+        </tr>
+        <tr>
+          <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/htv">https://w3id.org/profile/vocpub/htv</a></td>
+        </tr>
+        <tr>
+          <th>Role</th><td><code><a href="http://www.w3.org/ns/dx/prof/role/guidance">role:guidance</a></code></td>
+        </tr>
+        <tr>
+          <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/html">text/html</a></code></td>
+        </tr>
+      </table>     
+      <table class="props" id="https://w3id.org/profile/vocpub/example/valid">
         <tr>
           <td colspan="2"><h3>4. Example of a valid vocabulary</h3></td>
         </tr>
@@ -110,7 +123,7 @@
           <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/turtle">text/turtle</a></code></td>
         </tr>
       </table>
-      <table class="props">
+      <table class="props" id="https://w3id.org/profile/vocpub/example/invalid">
         <tr>
           <td colspan="2"><h3>5. Example of an invalid vocabulary</h3></td>
         </tr>
@@ -128,7 +141,7 @@
           <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/turtle">text/turtle</a></code></td>
         </tr>
       </table>
-      <table class="props">
+      <table class="props" id="https://w3id.org/profile/vocpub/example/invalid-2">
         <tr>
           <td colspan="2"><h3>6. Example of a second invalid vocabulary</h3></td>
         </tr>
@@ -146,7 +159,7 @@
           <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/turtle">text/turtle</a></code></td>
         </tr>
       </table>
-    </section>
+    </section>    
     <p>&nbsp;</p>
   </div><!-- #content -->
   <div class="footer" style="grid-column:1;"></div>
