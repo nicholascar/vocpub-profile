@@ -50,7 +50,9 @@
             <li><a href="#https://w3id.org/profile/vocpub/htv">How to validate instructions</a></li>
             <li><a href="#https://w3id.org/profile/vocpub/example/valid">Valid example data</a></li>
             <li><a href="#https://w3id.org/profile/vocpub/example/invalid">Invalid example data 1</a></li>
-            <li><a href="#https://w3id.org/profile/vocpub/example/invalid-2">Invalid example data 2</a></li>            
+            <li><a href="#https://w3id.org/profile/vocpub/example/invalid-2">Invalid example data 2</a></li>
+            <li><a href="#https://w3id.org/profile/vocpub/sdo">schema.org mapping</a></li>
+            <li><a href="#https://w3id.org/profile/vocpub/repo">Profile code repository</a></li>            
           </ol>
         </dd>
       </dl>
@@ -62,6 +64,9 @@
         <tr>
           <td colspan="2"><h3>1. Specification Document</h3></td>
         </tr>
+        <tr>
+          <th>Description</th><td>The normative, human-readable, listing of profile requirements</td>
+        </tr>           
         <tr>
           <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/spec">https://w3id.org/profile/vocpub/spec</a></td>
         </tr>
@@ -78,6 +83,9 @@
       <table class="props" id="https://w3id.org/profile/vocpub/validator">
         <tr>
           <td colspan="2"><h3>2. Validator in SHACL</h3></td>
+        </tr>
+        <tr>
+          <th>Description</th><td>A SHACL Shapes file to be used to test the conformance of RDF data to this profile</td>
         </tr>
         <tr>
           <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/validator">https://w3id.org/profile/vocpub/validator</a></td>
@@ -97,6 +105,9 @@
           <td colspan="2"><h3>3. How to Validate instructions</h3></td>
         </tr>
         <tr>
+          <th>Description</th><td>Written instructions on how to use this profile's validator on data</td>
+        </tr>
+        <tr>
           <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/htv">https://w3id.org/profile/vocpub/htv</a></td>
         </tr>
         <tr>
@@ -109,6 +120,9 @@
       <table class="props" id="https://w3id.org/profile/vocpub/example/valid">
         <tr>
           <td colspan="2"><h3>4. Example of a valid vocabulary</h3></td>
+        </tr>
+        <tr>
+          <th>Description</th><td>A vocabulary that can shown to be valid - conforming to VocPub - using to the Validator in this profile</td>
         </tr>
         <tr>
           <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/example/valid">https://w3id.org/profile/vocpub/example/valid</a></td>
@@ -159,6 +173,40 @@
           <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/turtle">text/turtle</a></code></td>
         </tr>
       </table>
+      <table class="props" id="https://w3id.org/profile/vocpub/sdo">
+        <tr>
+          <td colspan="2"><h3>7. schema.org mapping</h3></td>
+        </tr>
+        <tr>
+          <th>Description</th><td>A vocabulary of mappings of all the RDF, RDFS, OWL & SKOS etc. elements in this profile to the <a href="https://schema.org">schema.org</a> vocabulary.</td>
+        </tr>        
+        <tr>
+          <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/sdo">https://w3id.org/profile/vocpub/sdo</a></td>
+        </tr>
+        <tr>
+          <th>Role</th><td><code><a href="http://www.w3.org/ns/dx/prof/role/mapping">role:mapping</a></code></td>
+        </tr>
+        <tr>
+          <th>Conforms</th><td><a href="http://www.w3.org/TR/owl-rdf-based-semantics">OWL 2 Web Ontology Language RDF-Based Semantics (Second Edition)</a></td>
+        </tr>
+        <tr>
+          <th>Format</th><td><code><a href="https://w3id.org/mediatype/text/turtle">text/turtle</a></code></td>
+        </tr>
+      </table> 
+      <table class="props" id="https://w3id.org/profile/vocpub/repo">
+        <tr>
+          <td colspan="2"><h3>8. Profile code repository</h3></td>
+        </tr>
+        <tr>
+          <th>Description</th><td>Code repository storing all Profile artifacts</td>
+        </tr>        
+        <tr>
+          <th>Artifact</th><td><a href="https://w3id.org/profile/vocpub/repo">https://w3id.org/profile/vocpub/repo</a></td>
+        </tr>
+        <tr>
+          <th>Role</th><td><code><a href="http://www.w3.org/ns/dx/prof/role/repository">role:repository</a></code></td>
+        </tr>
+      </table>             
     </section>    
     <p>&nbsp;</p>
   </div><!-- #content -->

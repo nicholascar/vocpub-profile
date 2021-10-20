@@ -16,54 +16,81 @@
     
 This profile is used for multile Australian government and international vocabularies and is entirely generic, i.e. the additional constraints are not Australian or government-specific but just ensure certain technical model capabilities in the data."""@en ;
     skos:prefLabel "VocPub profile of SKOS" ;
-    prof:hasResource [
-        skos:prefLabel "Specification Document"@en ;
-        dcterms:conformsTo <https://www.w3.org/TR/html52/> ;
-        dcterms:format "text/html" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/spec> ;
-        prof:hasRole role:specification
-    ] ,
-    [
-        skos:prefLabel "Validator in SHACL"@en ;
-        dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
-        dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/validator> ;
-        prof:hasRole role:validation
-    ] ,
-    [
-        skos:prefLabel "How to Validate"@en ;
-        dcterms:description "Written instructions on how to use this profile's validator on data"@en ;
-        dcterms:format "text/html" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/htv> ;
-        prof:hasRole role:guidance
-    ] ,    
-    [
-        skos:prefLabel "Example of a valid vocabulary"@en ;
-        dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/examples/valid> ;
-        prof:hasRole role:example
-    ] ,
-    [
-        skos:prefLabel "Example of an invalid vocabulary"@en ;
-        dcterms:description "This example vocabulary does not satisfy the Specification's Requirement 2.1.5 (the ConceptScheme is missing a dcterms:created date)"@en ;
-        dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/examples/invalid> ;
-        prof:hasRole role:example
-    ] ,
-    [
-        skos:prefLabel "Example of a second invalid vocabulary"@en ;
-        dcterms:description "This example vocabulary does not satisfy the Specification's Requirements 2.3.1 & 2.3.2 (one Concept has two titles, another is missing rdfs:isDefinedBy)"@en ;
-        dcterms:format "text/turtle" ;
-        prof:hasArtifact <https://w3id.org/profile/vocpub/examples/invalid-2> ;
-        prof:hasRole role:example
-    ] ,
-    [
-        skos:prefLabel "Profile code repository"@en ;
-        dcterms:description "Code repository storing all Profile artifacts"@en ;
-        prof:hasArtifact "https://github.com/surroundaustralia/vocpub-profile"^^xsd:anyURI ;
-        prof:hasRole role:repository
-    ] ;
+    prof:hasResource 
+        <https://w3id.org/profile/vocpub/spec> ,
+        <https://w3id.org/profile/vocpub/validator> ,
+        <https://w3id.org/profile/vocpub/htv> ,
+        <https://w3id.org/profile/vocpub/examples/valid> ,
+        <https://w3id.org/profile/vocpub/examples/invalid> ,
+        <https://w3id.org/profile/vocpub/examples/invalid-2> ,
+        <https://w3id.org/profile/vocpub/sdo> ,
+        <https://w3id.org/profile/vocpub/repo> ;
     prof:isProfileOf <https://www.w3.org/TR/skos-reference/> ;
+.
+    
+<https://w3id.org/profile/vocpub/spec>
+    skos:prefLabel "Specification Document"@en ;
+    dcterms:description "The normative, human-readable, listing of profile requirements"@en ;
+    dcterms:conformsTo <https://www.w3.org/TR/html52/> ;
+    dcterms:format "text/html" ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/spec"^^xsd:anyURI ;
+    prof:hasRole role:specification
+.
+
+<https://w3id.org/profile/vocpub/validator>
+    skos:prefLabel "Validator in SHACL"@en ;
+    dcterms:description "A SHACL Shapes file to be used to test the conformance of RDF data to this profile"@en ;
+    dcterms:conformsTo <https://www.w3.org/TR/shacl/> ;
+    dcterms:format "text/turtle" ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/validator"^^xsd:anyURI ;
+    prof:hasRole role:validation
+.
+
+<https://w3id.org/profile/vocpub/htv>
+    skos:prefLabel "How to Validate"@en ;
+    dcterms:description "Written instructions on how to use this profile's validator on data"@en ;
+    dcterms:format "text/html" ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/htv"^^xsd:anyURI ;
+    prof:hasRole role:guidance
+.
+
+<https://w3id.org/profile/vocpub/examples/valid>
+    skos:prefLabel "Example of a valid vocabulary"@en ;
+    dcterms:description "A vocabulary that can shown to be valid - conforming to VocPub - using to the Validator in this profile"@en ;
+    dcterms:format "text/turtle" ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/examples/valid"^^xsd:anyURI ;
+    prof:hasRole role:example
+.
+
+<https://w3id.org/profile/vocpub/examples/invalid>
+    skos:prefLabel "Example of an invalid vocabulary"@en ;
+    dcterms:description "This example vocabulary does not satisfy the Specification's Requirement 2.1.5 (the ConceptScheme is missing a dcterms:created date)"@en ;
+    dcterms:format "text/turtle" ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/examples/invalid"^^xsd:anyURI ;
+    prof:hasRole role:example
+.
+
+<https://w3id.org/profile/vocpub/examples/invalid-2>
+    skos:prefLabel "Example of a second invalid vocabulary"@en ;
+    dcterms:description "This example vocabulary does not satisfy the Specification's Requirements 2.3.1 & 2.3.2 (one Concept has two titles, another is missing rdfs:isDefinedBy)"@en ;
+    dcterms:format "text/turtle" ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/examples/invalid-2"^^xsd:anyURI ;
+    prof:hasRole role:example
+.
+
+<https://w3id.org/profile/vocpub/sdo>
+    skos:prefLabel "schema.org mapping"@en ;
+    dcterms:conformsTo <http://www.w3.org/TR/owl-rdf-based-semantics> ;
+    dcterms:description "A vocabulary of mappings of all the RDF, RDFS, OWL & SKOS etc. elements in this profile to the [schema.org](https://schema.org) vocabulary"@en ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/sdo"^^xsd:anyURI ;        
+    prof:hasRole role:mapping
+.
+
+<https://w3id.org/profile/vocpub/repo>
+    skos:prefLabel "Profile code repository"@en ;
+    dcterms:description "Code repository storing all Profile artifacts"@en ;
+    prof:hasArtifact "https://w3id.org/profile/vocpub/repo"^^xsd:anyURI ;
+    prof:hasRole role:repository
 .
 
 <https://linked.data.gov.au/org/surround> a sdo:Organization ;
