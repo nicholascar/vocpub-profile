@@ -86,7 +86,7 @@
     <section id="intro">
       <h2>1. Introduction</h2>
       <p>
-        <a href="https://www.ga.gov.au">SURROUND Australia Pty Ltd (SURROUND)</a> defines a <em>vocabulary</em> as a controlled collection of defined terms that may or may not contain relationships between terms and relationships to terms in other vocabularies.
+        <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd (SURROUND)</a> defines a <em>vocabulary</em> as a controlled collection of defined terms that may or may not contain relationships between terms and relationships to terms in other vocabularies.
       </p>
       <p>
         SURROUND uses the Simple Knowledge Organization System Reference (SKOS)<sup><a href="#skos">ref</a></sup> to represent vocabularies in a form that can be read by humans and consumed by machines; that is, in <em>Semantic Web</em> form<sup><a href="#semantic-web">ref</a></sup>.
@@ -103,7 +103,7 @@
         In the next section, this document describes how SKOS's elements must be presented to make a vocabulary that conforms to this profile.
       </p>
       <p>
-        This specification's rules/requriements - are numbered and <span style="color:darkred;">indicated in red text</span>.
+        This specification's rules/requirements - are numbered and <span style="color:darkred;">indicated in red text</span>.
       </p>
     </section>
     <section id="elements-reqs">
@@ -114,7 +114,7 @@
           SURROUND identifies Semantic Web objects with URI-based persistent identifiers. For this reason:
         </p>
         <p class="req">
-          2.1.1 Each vocabulary <em>MUST</em> be identified by a URI
+          2.1.1 Each vocabulary <em>MUST</em> be identified by a IRI
         </p>
         <p>
           As per the <em>SKOS Primer</em><sup><a href="#skos-primer">ref</a></sup>, a document guiding the use of SKOS:
@@ -146,10 +146,10 @@
           2.1.5 Each vocabulary <em>MUST</em> have one and only one created date and one and only one modified date indicated using the <code>dcterms:created</code> and <code>dcterms:modified</code> properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal value
         </p>
         <p class="req">
-          2.1.6a Each vocabulary <em>MUST</em> have at least one creator, indicated using <code>dcterms:creator</code> property that must be a URI value indicating an instances of <code>sdo:Person</code>, <code>sdo:Organization</code> or <code>sdo:GovernmentOrganization</code>
+          2.1.6a Each vocabulary <em>MUST</em> have at least one creator, indicated using <code>dcterms:creator</code> property that must be a IRI value indicating an instances of <code>sdo:Person</code>, <code>sdo:Organization</code> or <code>sdo:GovernmentOrganization</code>
         </p>
         <p class="req">
-          2.1.6b Each vocabulary <em>MUST</em> have at least one publisher, indicated using <code>dcterms:publisher</code> property that must be a URI value indicating an instance of <code>sdo:Person</code>, <code>sdo:Organization</code> or <code>sdo:GovernmentOrganization</code>
+          2.1.6b Each vocabulary <em>MUST</em> have at least one publisher, indicated using <code>dcterms:publisher</code> property that must be a IRI value indicating an instance of <code>sdo:Person</code>, <code>sdo:Organization</code> or <code>sdo:GovernmentOrganization</code>
         </p>
         <p>
           To be able to link SKOS vocabularies to their non-vocabulary source information:
@@ -158,13 +158,13 @@
           2.1.7 Provenance for a <code>skos:ConceptScheme</code> <em>MUST</em> be indicated by at least one of the following properties: <code>dcterms:provenance</code>, <code>dcterms:source</code> or <code>prov:wasDerivedFrom</code>.
         </p>
         <p>
-          If a vocabulary is based on another Semantic Web resource, such as an ontology or another vocabulary, <code>prov:wasDerivedFrom</code> should be used to indicate that resource's URI. If the vocabulary is based on a resource that is identified by a URI but which is not a Semantic Web resource, <code>dcterms:source</code> should be used to indicate the resource's URI. If the vocabulary is based on something which cannot be identified by URI, a statement about the thing should be given in a literal value indicated with the <code>dcterms:provenance</code> property. If the vocabulary is not based on any other resource or source of information, i.e. this vocabulary is its only expression, this should be communicated by use of the <code>dcterms:provenance</code> indicating the phrase "This vocabulary is expressed for the first time here".
+          If a vocabulary is based on another Semantic Web resource, such as an ontology or another vocabulary, <code>prov:wasDerivedFrom</code> should be used to indicate that resource's IRI. If the vocabulary is based on a resource that is identified by a IRI but which is not a Semantic Web resource, <code>dcterms:source</code> should be used to indicate the resource's IRI. If the vocabulary is based on something which cannot be identified by IRI, a statement about the thing should be given in a literal value indicated with the <code>dcterms:provenance</code> property. If the vocabulary is not based on any other resource or source of information, i.e. this vocabulary is its only expression, this should be communicated by use of the <code>dcterms:provenance</code> indicating the phrase "This vocabulary is expressed for the first time here".
         </p>
         <p>
           To ensure that all the terms within a vocabulary are linked to the main vocabulary object, the <code>skos:ConceptScheme</code>:
         </p>
         <p class="req">
-          2.1.8 All <code>skos:Concept</code> instances within a <code>skos:ConceptScheme</code> <em>MUST</em> link be ordered in a single, term hierarchy using <code>skos:broader</code> and/or <code>skos:narrower</code> properties and which contains no cycles.
+          2.1.8 All <code>skos:Concept</code> instances within a <code>skos:ConceptScheme</code> <em>MUST</em> be ordered in a single, term hierarchy using <code>skos:broader</code> and/or <code>skos:narrower</code> properties and which contains no cycles.
         </p>
         <p>
           To unambiguously link the term hierarchy within a vocabulary to the vocabulary itself:
@@ -206,7 +206,7 @@
           The fundamental element of the SKOS vocabulary is the concept. Concepts are the units of thought — ideas, meanings, or (categories of) objects and events—which underlie many knowledge organization systems
         </p>
         <p>
-          Vocabularies conforming to this profile must present at least one <code>sckos:Concept</code> within the vocabulary file and, as per requirements in Section 2.1, at least once <code>skos:Concept</code> must be indicated as the top concept of the vocabulary.
+          Vocabularies conforming to this profile must present at least one <code>skos:Concept</code> within the vocabulary file and, as per requirements in Section 2.1, at least once <code>skos:Concept</code> must be indicated as the top concept of the vocabulary.
         </p>
         <p>
           To ensure that <code>skos:Concept</code> instances are identifiable and their meaning isn't obscure or lost:
@@ -259,10 +259,7 @@
         To ensure that agents are linked to non-Semantic Web forms of identification:
       </p>
       <p class="req">
-        2.4.3a Each agent <em>MUST</em> indicate either a <code>sdo:url</code> (for organizations) or a <code>sdo:email</code> (for people) property with a URL or email value
-      </p>
-      <p class="req">
-        2.4.3b Each agent <em>MUST</em> indicate either a <code>sdo:url</code> (for organizations) or a <code>sdo:email</code> (for people) property with a URL or email value
+        2.4.3 Each agent <em>MUST</em> indicate either a <code>sdo:url</code> (for organizations) or a <code>sdo:email</code> (for people) property with a URL or email value
       </p>
     </section>
     <section id="references">
