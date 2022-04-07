@@ -20,3 +20,6 @@ Some tools also provide "single click" validation for data as they have validato
     * http://rdftools.surroundaustralia.com/validate
         * Add your data to the "Input Document" window, or upload a file
         * Select the VocPub, or other, validator from the list and validate
+        * You will get a human-readable as well as a machine-readable result
+
+This validator is also included automatically in some systems, such as the [Biodiversity Data Repository](https://bdr.gov.au)'s [Gateway](https://gateway.bdr.gov.au).
