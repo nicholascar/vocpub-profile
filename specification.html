@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
   <link href='//fonts.googleapis.com/css?family=Spartan:300,400' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Bebas+Neue:300,400' rel='stylesheet' type='text/css'>
-  <link href="style/surround.css" rel="stylesheet" type="text/css">
-  <title>VocPub Profile - Spec</title>
+  <link href='//fonts.googleapis.com/css?family=Bebas+Neue:300,400' rel='stylesheet' type='text/css'>  
+  <link href="style/agldwg.css" rel="stylesheet" type="text/css">
+  <title>VocPub Profile</title>
 </head>
 <body>
   <div class="header" style="grid-column:1;"></div>
   <div id="header" class="header" style="grid-column:2; display:grid; grid-template-columns:180px auto; grid-template-rows:50% 50%;">
     <div id="logo" style="grid-column:1; grid-row:1/3">
-      <a href="https://surroundaustralia.com">
-        <img alt="SURROUND Logo" style="width:300px; margin-top:10px" src="style/logo-white.144b0ef3.svg" /></a>
+      <a href="https://www.linked.data.gov.au">
+        <img alt="AGLDWG Logo" style="width:150px; margin-top:10px" src="style/agldwg-logo-ochre-150.png" /></a>
     </div>
   </div><!-- #header -->
   <div class="header" style="grid-column:3;"></div>
@@ -30,13 +30,13 @@
         <dt>Created</dt>
         <dd>2020-06-14</dd>
         <dt>Modified</dt>
-        <dd>2021-08-31</dd>
+        <dd>2022-04-24</dd>
         <dt>Creator</dt>
-        <dd><a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a></dd>
+        <dd><a href="https://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a></dd>
         <dt>Contributor</dt>
         <dd><a href="https://orcid.org/0000-0002-3884-3420">Simon J D Cox</a></dd>
         <dt>Publisher</dt>
-        <dd><a href="https://linked.data.gov.au/org/surround">SURROUND Australia Pty Ltd</a></dd>
+        <dd><a href="https://linked.data.gov.au/org/agldwg">Australian Government Linked Data Working Group</a></dd>
         <dt>Further metadata</dt>
         <dd>This specification is part of the <em>VocPub Profile</em>. See that profile's main document for License &amp; Rights information and other metadata not given here.</dd>
         <dt>Profile URI</dt>
@@ -48,7 +48,7 @@
     <section id="abstract">
       <h2>Abstract</h2>
       <p>
-        This is the specification document of <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a>'s <a href="https://www.w3.org/TR/dx-prof/#definitions">profile</a> of <a href="https://www.w3.org/TR/skos-reference/">SKOS</a>. It defines the requirements that data must satisfy to be considered conformant with this profile.
+        This is the specification document of the VocPub <a href="https://www.w3.org/TR/dx-prof/#definitions">profile</a> of <a href="https://www.w3.org/TR/skos-reference/">SKOS</a>. It defines the requirements that data must satisfy to be considered conformant with this profile.
       </p>
       <p>
         This specification is not to be used for testing conformance of RDF resoruces to this profile. That role belongs to the <em>validation</em> resource within this profile:
@@ -86,7 +86,7 @@
     <section id="intro">
       <h2>1. Introduction</h2>
       <p>
-        <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd (SURROUND)</a> defines a <em>vocabulary</em> as a controlled collection of defined terms that may or may not contain relationships between terms and relationships to terms in other vocabularies.
+        This profile defines a <em>vocabulary</em> as a controlled collection of defined terms that may or may not contain relationships between terms and relationships to terms in other vocabularies.
       </p>
       <p>
         SURROUND uses the Simple Knowledge Organization System Reference (SKOS)<sup><a href="#skos">ref</a></sup> to represent vocabularies in a form that can be read by humans and consumed by machines; that is, in <em>Semantic Web</em> form<sup><a href="#semantic-web">ref</a></sup>.
@@ -283,30 +283,17 @@
     </dd>
   </dl>
 </section>
-  </div><!-- #content -->
-  <div class="footer" style="grid-column:1;"></div>
-  <div class="footer" style="grid-column:2; display:grid; grid-column:70% 30%;">
-    <div style="grid-column:1;">
-      <img src="style/logo-dark.41edee3d.svg" alt="SURROUND white logo" />
+</div><!-- #content -->
+<div class="footer" style="grid-column:1;"></div>
+<div class="footer" style="grid-column:2; display:grid; grid-column:70% 30%;">
+  <div style="grid-column:1;">
+    This web page content is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+  </div>
+  <div style="grid-column:2;">
+    <div style="float:right;">
     </div>
-    <div style="grid-column:2;">
-      <div style="float:right;">
-        <h4>SURROUND Australia Pty Ltd</h4>
-        <p><a href="https://surroundaustralia.com">https://surroundaustralia.com</a></p>
-        <p style="font-style: italic;">
-          Level 9, Nishi Building<br />
-          2 Phillip Law Street, New Acton<br />
-          Canberra 2601<br />
-          Australia
-        </p>
-        <p><a href="info@surroundaustralia.com">info@surroundaustralia.com</a></p>
-        <p>
-          <a href="https://surroundaustralia.com/privacy-policy">Privacy Policy</a>
-        </p>
-        <p>&copy; SURROUND Australia Pty. Ltd. 2021</p>
-      </div>
-    </div>
-  </div><!-- #footer -->
-  <div class="footer" style="grid-column:3;"></div>
+  </div>
+</div><!-- #footer -->
+<div class="footer" style="grid-column:3;"></div>
 </body>
 </html>

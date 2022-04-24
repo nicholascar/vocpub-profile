@@ -10,15 +10,26 @@
 @base <https://w3id.org/profile/vocpub/validator/> .
 
 
-<https://w3id.org/profile/vocpub>
+<https://w3id.org/profile/vocpub/validator>
     a owl:Ontology ;
     skos:prefLabel "VocPub Validator"@en ;
     skos:definition "SHACL validator for the VocPub Profile"@en ;
-    dcterms:creator <https://linked.data.gov.au/org/surround> ;
-    dcterms:publisher <https://linked.data.gov.au/org/surround> ;
+    dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
+    dcterms:publisher <https://linked.data.gov.au/org/agldwg> ;
     dcterms:created "2020-06-14"^^xsd:date ;
-    dcterms:modified "2021-03-17"^^xsd:date ;
-    owl:versionIRI <https://w3id.org/profile/vocpub/2.0>
+    dcterms:modified "2022-04-24"^^xsd:date ;
+    owl:versionIRI <https://w3id.org/profile/vocpub/validator/2.0>
+.
+
+<https://linked.data.gov.au/org/agldwg> a sdo:Organization ;
+    sdo:name "Australian Government Linked Data Working Group" ;
+    sdo:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0002-8742-7730> a sdo:Person ;
+    sdo:name "Nicholas J. Car" ;
+    sdo:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
+    sdo:identifier "ttps://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
 .
 
 #

@@ -12,9 +12,9 @@
     dcterms:titles "schema.org mapping"@en ;
     dcterms:description "A vocabulary of mappings of all the RDF, RDFS, OWL & SKOS etc. elements in this profile to the [schema.org](https://schema.org) vocabulary"@en ;
     dcterms:created "2021-10-20"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/surround> ;
-    dcterms:modified "2021-10-20"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/surround> ;
+    dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
+    dcterms:modified "2022-04-24"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/agldwg> ;
 .
 
 # Classes

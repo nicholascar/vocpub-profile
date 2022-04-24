@@ -9,9 +9,9 @@
 <https://w3id.org/profile/vocpub>
     a prof:Profile ;
     dcterms:created "2020-06-13"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/surround> ;
-    dcterms:modified "2021-08-31"^^xsd:date ;
-    dcterms:publisher <https://linked.data.gov.au/org/surround> ;
+    dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
+    dcterms:modified "2022-04-24"^^xsd:date ;
+    dcterms:publisher <https://linked.data.gov.au/org/agldwg> ;
     skos:definition """This is a profile of taxonomy data model SKOS - i.e. SKOS with additional constraints. It defines some compulsory properties for SKOS's ConceptScheme, Concept and Collection classes and ensures that certain relationships between them are present, e.g. topConceptOf & inScheme linking Concepts to ConceptSchemes. It also requires goes a bit beyond 'pure' SKOS by ensuring that Concepts indicate the ConceptScheme they are defined in, which may be different to the ConceptScheme they re presented in. This allows VocPub-valid SKOS Concepts to be re-used in multiple of vocabularies efficiently.
     
 This profile is used for multile Australian government and international vocabularies and is entirely generic, i.e. the additional constraints are not Australian or government-specific but just ensure certain technical model capabilities in the data."""@en ;
@@ -93,7 +93,13 @@ This profile is used for multile Australian government and international vocabul
     prof:hasRole role:repository
 .
 
-<https://linked.data.gov.au/org/surround> a sdo:Organization ;
-    sdo:name "SURROUND Australia Pty Ltd" ;
-    sdo:url "https://surroundaustralia.com"^^xsd:anyURI ;
+<https://linked.data.gov.au/org/agldwg> a sdo:Organization ;
+    sdo:name "Australian Government Linked Data Working Group" ;
+    sdo:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0002-8742-7730> a sdo:Person ;
+    sdo:name "Nicholas J. Car" ;
+    sdo:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
+    sdo:identifier "ttps://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
 .

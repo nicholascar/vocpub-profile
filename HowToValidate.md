@@ -16,7 +16,7 @@ Validation using SHACL validators involves applying a [SHACL](https://www.w3.org
 
 Some tools also provide "single click" validation for data as they have validators, such as this VocPub one, pre-loaded:
 
-4. **SURROUND's RDFTools Online Validator**
+4. **RDFTools Online Validator**
     * http://rdftools.surroundaustralia.com/validate
         * Add your data to the "Input Document" window, or upload a file
         * Select the VocPub, or other, validator from the list and validate

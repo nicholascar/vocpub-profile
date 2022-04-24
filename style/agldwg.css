@@ -19,8 +19,9 @@ body {
 }
 
 .header {
-    background-color: rgb(35, 31, 32);
-    border-bottom: solid 10px rgb(154, 74, 255);
+    background-color: white;
+    height: 150px;
+    border-bottom: solid 10px rgb(133, 25, 2);
 }
 
 #slogan {
@@ -44,37 +45,38 @@ body {
 }
 
 h1 {
-    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     padding: 0;
     margin: 0 0 0.2em 0;
-    color: #2f2f2f;
+    color: rgb(133, 25, 2);
     font-size: 3em;
     font-weight: normal;
     line-height: 1.1;
 }
 
 h2 {
-    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 2em;
 }
 
 h3 {
-    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 1.75em;
 }    
 
 h4 {
-    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     font-size: 1.3em;
 }
 
-.footer {
-    background-color: rgb(223, 227, 229);
+.footer {    
+    background: url("/style/comms_footer_bg.svg") top left no-repeat ;
+    background-color: #e4e4e4;
     padding-top:30px;
 }
 
 a {
-    color: rgb(154, 74, 255);
+    color: rgb(153, 79, 0);
     text-decoration: none;
 }
 
